@@ -12,33 +12,30 @@
 
 <body>
     <header>
-        <h1>Welcome To Cocktail Bored</h1>
-        <h3>Try the cocktail shaker for a ramdom cocktail</h3>
+        <h1 class="size">Welcome To Cocktail Bored</h1>
+        <h3 class="size">Try the cocktail shaker for a ramdom cocktail</h3>
         <form id="searchShake">
             <button>Shake me a cocktail</button>
         </form>
-        <h4>Thaï Coffee</h4>
+        <h4 class="right">Thaï Coffee</h4>
 
     </header>
 
     <main>
         <form id="searchBox" action="">
             <label for="ingredient"></label>
-            <input type="radio" id="ingredient"> Ingredient
-            <label for="CockailName" id="CockailName"></label>
-            <input type="radio" id="CockailName"> CocktailName <br>
+            <input type="radio" name="groupe" id="ingredient"> Ingrédients
+            <label for="CockailName"></label>
+            <input type="radio" name="groupe" id="CockailName"> Cocktail Name <br> 
+            <input type="search" class="form-control rounded" id="searchControl" placeholder="Search"
+                aria-label="Search" aria-describedby="search-addon" />
+            <button type="submit" class="btn btn-outline-primary" id="buttonSearch" data-mdb-ripple-init>search</button>
         </form>
 
-        <form id="searchBar">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
-            <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
-        </form>
+        <hr>
 
+        <div id="cocktailList"></div>
 
-
-        <div id="cockailListe"></div>
-        
 
     </main>
 
@@ -48,8 +45,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="script/script.js"></script>
 </body>
 
