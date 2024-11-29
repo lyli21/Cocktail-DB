@@ -1,8 +1,13 @@
+* {
+  margin: 20px;
+}
+
+
 
 header {
     font-family: Arial, sans-serif;
-    margin: 15px;
-    padding: 10px;
+    
+    height: 250px;
     background-color:  #f8dce2;
     color: #413B61;
     font-style: italic;
@@ -11,7 +16,7 @@ header {
   }
 
   main {
-    margin: 10px;
+    margin: 100px;
   }
 
   img {
@@ -23,12 +28,11 @@ header {
     justify-content: center;
     box-shadow: 0 0 5px white, 00 0px white, ;
   }
+  
   .right {
     display: flex;
     flex-direction: column, row-reverse;
     justify-content: right;
-    margin: 2%;
-    padding-left: 80%;
   }
   #searchShake {
     display: flex;
@@ -47,14 +51,13 @@ header {
 
 
   #searchBox {
-    margin: 30px;
+    margin: 20px;
+    height: 20%;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 60%;
+    flex-direction: row;
+    justify-content: space-around;
     gap: 10px;
-    align-items: center;
     font-family: Snell Roundhand, cursive ;
-  
 
   }
 
@@ -75,10 +78,7 @@ header {
     height: 20%;
     gap: 3%;
   }
-
-  h3 {
-    padding: 5%;
-  }
+  
 
   .card {
     display: flex;
@@ -90,3 +90,145 @@ header {
     margin: 1px;
     padding: 5px;
   }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 15px;
+    width: 70%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    text-align: center;
+}
+
+#modalImage {
+
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px auto; /* auto horizontalement pour centrer */
+    display: block; /* Nécessaire pour que margin: auto fonctionne */
+}
+
+.close-modal {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#modalIngredients {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  .modal-content {
+      width: 95%;
+      max-width: 300px;
+      margin: 5% auto;
+      padding: 10px;
+  }
+
+  #modalImage {
+      width: 150px;
+      height: 150px;
+  }
+
+  #modal-title {
+      font-size: 1rem;
+  }
+
+  #modalIngredients {
+      font-size: 0.8rem;
+  }
+}
+
+/* Mobile (Small Phones) - 321px to 375px */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .modal-content {
+      width: 90%;
+      max-width: 350px;
+      margin: 10% auto;
+      padding: 15px;
+  }
+
+  #modalImage {
+      width: 180px;
+      height: 180px;
+  }
+
+  #modal-title {
+      font-size: 1.1rem;
+  }
+}
+
+/* Mobile (Medium Phones) - 376px to 425px */
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .modal-content {
+      width: 85%;
+      max-width: 400px;
+      margin: 15% auto;
+      padding: 15px;
+  }
+
+  #modalImage {
+      width: 200px;
+      height: 200px;
+  }
+
+  #modal-title {
+      font-size: 1.2rem;
+  }
+}
+
+ /* For mobile phones: */
+ [class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+} 

@@ -16,14 +16,12 @@
         <h1 class="size">Welcome To Cocktail Bored</h1>
         <h3 class="size">Try the cocktail shaker for a ramdom cocktail</h3>
         <form id="searchShake">
-            <button>Shake me a cocktail</button>
+            <button >Shake me a cocktail</button>
         </form>
         <h4 class="right">Thaï Coffee</h4>
 
-    </header>
 
-    <main>
-        <!--barre de recherche et radio-->
+     <!--barre de recherche et radio-->
         <form id="searchBox" action="">
             <label for="ingredient"></label>
             <input type="radio" name="groupe" id="ingredient"> Ingrédients
@@ -33,15 +31,27 @@
                 aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-outline-primary" id="buttonSearch" data-mdb-ripple-init>search </button>
         </form>
-
         <hr>
 
-        <div id="cocktailList"></div>
+    </header>
+
+    <main>
+   
+
 
 <!--Modal-->
 
-
-<div class=""
+   <div id="cocktailList"></div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modalImage" src="" alt="" />
+        <h6>Ingrédients and dosages : </h6>
+        <ul id="modalIngredients"></ul>
+        <p id="modalInstructions"></p>
+    </div>
+</div>
     </main>
 
 
